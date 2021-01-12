@@ -1,0 +1,76 @@
+selcuk@selcuk-Vbox:~$ ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command]
+selcuk@selcuk-Vbox:~$ .ssh
+
+Command '.ssh' not found, did you mean:
+
+  command 'ssh' from deb openssh-client (1:8.2p1-4ubuntu0.1)
+  command 'bssh' from deb avahi-ui-utils (0.7-4ubuntu7)
+  command 'cssh' from deb clusterssh (4.14-1)
+  command 'mssh' from deb mssh (2.2-5)
+  command 'zssh' from deb zssh (1.5c.debian.1-7build2)
+  command 'sssh' from deb guile-ssh (0.11.3-2)
+
+Try: sudo apt install <deb name>
+
+selcuk@selcuk-Vbox:~$ cd .ssh
+selcuk@selcuk-Vbox:~/.ssh$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/selcuk/.ssh/id_rsa): trexssh.txt
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in trexssh.txt
+Your public key has been saved in trexssh.txt.pub
+The key fingerprint is:
+SHA256:ZypYIpe5F2QNX85trJP9M4fxS631EVz5W+P3KwDpRIw selcuk@selcuk-Vbox
+The key's randomart image is:
++---[RSA 3072]----+
+|      . o .      |
+|       E * o    .|
+|      o + + +  ..|
+|     =   + =  . o|
+|  . = o S B . .+o|
+|   o = . = o ..+*|
+|    o o .   . ==*|
+|     . .     ..**|
+|              oo+|
++----[SHA256]-----+
+selcuk@selcuk-Vbox:~/.ssh$ ls -al
+total 16
+drwx------  2 selcuk selcuk 4096 Jan 12 15:50 .
+drwxr-xr-x 17 selcuk selcuk 4096 Jan  1 02:04 ..
+-rw-------  1 selcuk selcuk 2610 Jan 12 15:50 trexssh.txt
+-rw-r--r--  1 selcuk selcuk  572 Jan 12 15:50 trexssh.txt.pub
+selcuk@selcuk-Vbox:~/.ssh$ cat id_rsa.pub
+cat: id_rsa.pub: No such file or directory
+selcuk@selcuk-Vbox:~/.ssh$ cat trexssh.txt.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGd/V9+YqI4yzzIZbCu8VNXXhzRzYxH3VIpZ2NvU+QNKeuJzwaeAPLVPC7C7qeUwoiZJIbd3Rcm0e+rlYbRWjv2w6VVwu6SAcCN4xuuPkCBg0lRzcH2wRv7rLlUcHn57vZOUkwCFPFip6+pVOwfKp4VTRx9qjhG6g6n9ZnIebp+xafMWGkVFbkuifezqCLPxdLbxLs6waRpCRrMBsxHJC497y1Zccj8vW6agE7ckMmXG5mQN1BkLyGC4T7wBZI6ZyJqhI5XLs8CHJKRiAQPsZFVUK619zVtJb7ZDaoFUuxevW3wdQsQTdbJtXgiyxdCVIaY21gu8oOxlv5lGej7daMYD0VdLIV4qil/j6dM/FWusdLTBa3nHI33ovvBVE4jFlYuJBQ9F/hVOVbg/Ijkm9EmYUAWb6fUCWidXzsmVCZPFLEd/q+BIRUzdQdyF2nwfuuQ51stHAq2X3ulodVhsghFQ25t9QTmx97p/SG7cN/ZhCTWjER00N6s8whmVRzim0= selcuk@selcuk-Vbox
+selcuk@selcuk-Vbox:~/.ssh$ ^C
+selcuk@selcuk-Vbox:~/.ssh$ ^C
+selcuk@selcuk-Vbox:~/.ssh$ git clone <ssh-rope-link>
+bash: syntax error near unexpected token `newline'
+selcuk@selcuk-Vbox:~/.ssh$ git status
+fatal: not a git repository (or any of the parent directories): .git
+selcuk@selcuk-Vbox:~/.ssh$ git --version
+git version 2.25.1
+selcuk@selcuk-Vbox:~/.ssh$ git config --global username "Raptorex65"
+error: key does not contain a section: username
+selcuk@selcuk-Vbox:~/.ssh$ git config --global user.name "Raptorex65"
+selcuk@selcuk-Vbox:~/.ssh$ git config --global user.email "lamek3565@gmail.com"
+selcuk@selcuk-Vbox:~/.ssh$ git clone git@github.com:Raptorex65/ssh-connection.git
+Cloning into 'ssh-connection'...
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,140.82.121.3' (RSA) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
